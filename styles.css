@@ -1,0 +1,90 @@
+html{
+    height: 100vh;
+    min-width: 600px;
+    background-image: linear-gradient(130deg, rgb(180, 179, 179), black);
+}
+
+.container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Kurale';
+
+}
+.logo{
+    display: inline-flex ;
+    margin: auto;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 1.5rem 0;
+    align-items: center;
+}
+
+.main{
+    padding: 20px;
+}
+
+form{
+    background-color: rgb(96, 99, 99);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+}
+
+input[type="text"] {
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Kurale', sans-serif;
+    color: #595959;
+    flex-grow: 1;
+}
+
+button {
+    font-size: 1.5rem;
+    background-color: whitesmoke;
+    outline: 0;
+    border: none;
+    color: #595959;
+}
+
+button:hover {
+    color:rgb(213, 147, 23);
+}
+
+.todoList{
+    background-color: rgba(192, 192, 192, 0.984);
+    border-radius: 5px;
+    padding: 10px, 25px;
+    height: 100%;
+}
+
+ul{
+    padding-left: 0px;
+    list-style: none;
+
+}
+
+li{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    padding:15px 0;
+    font-size: 1rem;
+    color:#595959;
+}
+
+.clearAll{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.clearAll:hover{
+    color: rgb(213, 147, 23);
+}
