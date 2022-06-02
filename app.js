@@ -15,7 +15,13 @@ function handleSubmitForm(e) {
 
 function handleDelete() {
     let deleteButton = document.getElementById('delete-button')
-    deleteButton.parentElement.remove()
+    let listItemToDelete = deleteButton.parentElement
+    listItemToDelete.remove()
+}
+
+function handleDeleteAll() {
+    let allListItems = Array.from(document.getElementsByTagName('li'))
+    allListItems.forEach(item => item.remove())
 }
 
 //HELPER
