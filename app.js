@@ -1,24 +1,21 @@
 //SELECTORS
-document.querySelector('form').addEventListener('submit', handleSubmitForm);
-document.querySelector('ul').addEventListener('click', handleClickDeleteOrCheck)
+document.querySelector('form').addEventListener('submit', handleSubmitForm)
+
 
 //EVENT HANDLER
 function handleSubmitForm(e) {
     e.preventDefault(); //prevent default action of submit
     let taskInput = document.getElementById('task-input')
-    console.log(taskInput.value)
     if (taskInput.value != ' ') {
         addTodo(taskInput.value)
     }
     taskInput.value = ' '
 }
 
-function handleClickDeleteOrCheck(e) {
-    if (e.target.name == 'checkButton')
-        checkTodo(e)
 
-    if (e.target.name == 'deleteButton')
-        checkTodo(e)
+function handleDelete() {
+    let deleteButton = document.getElementById('delete-button')
+    deleteButton.parentElement.remove()
 }
 
 //HELPER
@@ -28,10 +25,11 @@ function addTodo(todo) {
     listItem.innerHTML = `
     <button name ="checkButton"><i class = "fas fa-check-square"></i></button>
     <span class ="todo-items">${todo}</span>
-    <button name = "deleteButton"><i class ="fas fa-trash"></i></button>
+    <button onclick="handleDelete()" id= "delete-button"><i class ="fas fa-trash"></i></button>
     `;
     listContainer.appendChild(listItem)
 }
+
 
 function checkTodo(e) {
 
