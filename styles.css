@@ -55,24 +55,24 @@ button:hover {
     color:rgb(213, 147, 23);
 }
 
-.todoList{
+.todo-list-container{
     background-color: rgba(192, 192, 192, 0.984);
     border-radius: 5px;
     padding: 10px, 25px;
     height: 100%;
 }
 
-ul{
+#todo-list{
     padding-left: 0px;
     list-style: none;
-
 }
 
 li{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid whitesmoke;
-    padding:15px 0;
+    padding:15px;
     font-size: 1rem;
     color:#595959;
 }
